@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>8Stack</title>
+</head>
+<body>
+Push: <input type = 'text' id='element'> <button id = 'pop'>Pop</button>
+<div id = 'number'><ul id = 'num'></ul></div>
+<script>
+	var elem = document.getElementById('element');
+	var popNum = document.getElementById('pop');
+	var nums = document.getElementById('number');
+	var numArray = document.getElementById('num') 
+	elem.addEventListener('change', stackElem);
+	popNum.addEventListener('click', remove);
+	numArray =[]
+	i = 0
+	function remove(){
+		numArray.pop();
+	}
+	function stackElem(){
+		numArray.push(elem.value);
+		nums.innerHTML += '<li>' + numArray[i] + '</li>'
+		elem.value = ''
+		i += 1
+
+	}
+</script>
+</body>
+</html>

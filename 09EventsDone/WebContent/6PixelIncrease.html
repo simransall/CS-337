@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>6PixelIncrease</title>
+</head>
+<body>
+<button id = 'button'>Increment by 1px</button>
+<div id = 'increase'>Increase my point size by 1px each click</div>
+<script>
+	var pushButton = document.getElementById('button');
+	var increaseSize = document.getElementById('increase');
+	pushButton.addEventListener('click', changeSize);
+	size = 16
+	function changeSize(){
+		size += 1
+		increaseSize.style.fontSize = size + 'px';
+	}
+</script>
+</body>
+</html>

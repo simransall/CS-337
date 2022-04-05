@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>2ChangeStyles</title>
+</head>
+<body>
+<div id='header'><h3>Click this text</h3></div>
+<hr>
+<div id = 'change'>Click "Click this text" above to change this div in several ways</div>
+<script>
+	var changeText = document.getElementById('change')
+	var header1 = document.getElementById('header')
+	header1.addEventListener('click', handler)
+	function handler(){
+		changeText.innerHTML = "Change innerHTML, font 24 px, border 5px, width 300px, padding 50 px, background? you guess"
+		changeText.style.fontSize = 24;
+		changeText.style.color = 'green';
+		changeText.style.border = "thick solid red";
+		changeText.style.width = 300;
+		changeText.style.padding = 50;
+		changeText.style.backgroundColor = 'lightGray';
+		}
+	
+</script>
+</body>
+</html>

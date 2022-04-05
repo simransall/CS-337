@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>1HideShow</title>
+</head>
+<body>
+<button id ='button' value = 'Hide'> Hide </button>
+<div id = 'text'>This text will appear and disappear</div>
+<script>
+	var button = document.getElementById('button')
+	var text = document.getElementById('text')
+	button.addEventListener("click", hideName)
+	function hideName(){
+		if (button.value = 'Hide'){
+			button.innerHTML = 'Show'
+			text.style.visibility = 'hidden'
+		}
+	}
+	
+</script>
+</body>
+</html>

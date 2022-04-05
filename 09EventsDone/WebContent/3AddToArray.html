@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>3AddToArray</title>
+</head>
+<body>
+Enter a name: <input type = 'text' id='name'> <br> <br>
+The array of names: <br> <br>
+<div id = 'listOfNames'></div>
+<script>
+	var firstName = document.getElementById('name');
+	var listNames = document.getElementById('listOfNames');
+	var counter = 1
+	countNames = []
+	firstName.addEventListener('change', list);
+	listNames.innerHTML = ''
+	function list(){
+		countNames.push(firstName.value);
+		listNames.innerHTML += counter + ': ' + firstName.value + '<br>';
+		firstName.value = ''
+		counter += 1;
+		
+	}
+</script>
+</body>
+</html>

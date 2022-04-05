@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>4OverOut</title>
+</head>
+<body>
+<p><div id = 'Hover' onmouseover = 'changeText()' onmouseout = 'originalText()'>Hover over Me</div><br>
+<div id = 'changeThis'>Exited 18 events</div>
+<script>
+	var hover = document.getElementById('Hover');
+	var textChange = document.getElementById('changeThis');
+	hover.addEventListener('mouseover', changeText);
+	function changeText(){
+		changeThis.innerHTML = 'Entered 23 events <br>';
+	}
+	function originalText(){
+		changeThis.innerHTML = 'Exited 18 events'
+	}
+</script>
+</body>
+</html>

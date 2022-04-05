@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>5GrowingImage</title>
+</head>
+<body>
+<img src='images/uacampus.jpg' height='100' width='100' id = 'myImage'>
+<script>
+	var image = document.getElementById('myImage');
+	image.addEventListener('click', getBigger);
+	function getBigger(){
+		image.height += 5
+		image.width += 5
+	}
+</script>
+</body>
+</html>

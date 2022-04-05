@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>7ArraySum</title>
+</head>
+<body>
+Enter a number: <input type = 'text' id='number'> <br>
+sum of [<span id = 'sum'></span>] = <span id = 'total'>0</span>
+<script>
+	var inputNumber = document.getElementById('number');
+	var arraySum = document.getElementById('sum');
+	var totalSum = document.getElementById('total');
+	inputNumber.addEventListener('change', addNumbers);
+	var addition = 0
+	numbers = []
+	function addNumbers(){
+		numbers.push(inputNumber.value);
+		arraySum.innerHTML += inputNumber.value + ',';
+		addition = Number(addition) + Number(inputNumber.value);
+		totalSum.innerHTML = addition;
+		inputNumber.value = ''
+	}
+</script>
+</body>
+</html>
