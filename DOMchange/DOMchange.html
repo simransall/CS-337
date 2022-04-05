@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>DOMchange</title>
+</head>
+<body>
+Change this web page
+<hr>
+<div id = "toBeChanged"></div>
+<script>
+changeTheDom(); // Call the function below on page load and refresh
+function changeTheDom() {
+  var message = prompt("Enter a message to be added to the DOM");
+  // Get a reference to the HTML element with id="toBeChanged"  
+  // Change the innerHTML of the HTML element with id="toBeChanged"  wrapped in an <h3>
+ 	document.getElementById("toBeChanged").innerHTML = "<h3>" + message + "</h3>"
+
+}  
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CSS Layout</title>
+</head>
+<style>
+/*Simran Sall*/
+.container{
+	background-color: lightgray;
+	overflow: hidden;
+}
+.image{
+	background-image:url("images/venice.jpg");
+	width: 240px;
+	height: 370px;
+	float: right;
+	vertical-align: top;
+	
+}
+.partialhead {
+	color: yellow;
+	border-style: solid;
+	background-color: lightgray;
+	width: 590px;
+	height: 50px;
+	font-size: 26pt;
+}
+
+.reviews {
+	color: red;
+	border-style: dotted;
+	float: left;
+	width: 295px;
+	height: 370px;
+	font-size: 12pt;
+	background-color: lightgray;
+
+}
+</style>
+<body>
+<h3>A Heading 3 writes 'lightgray div holds four other divs' </h3>
+<div class="container">
+   <div class="image">
+   </div>
+   <div class="partialhead">Heading</div>
+   <div class="reviews">295px by 370px;</div>
+   <div class="reviews">repeat</div>
+</div>
+</body>
+</html>
