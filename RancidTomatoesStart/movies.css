@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+/* TODO: Add any and all needed styles here */
+/* Simran Sall */
+.background {
+	background-image: url('images/moviebg.png')
+}
+
+.topBorder {
+	background-image: url('images/rancidbannerbg.png')
+}
+
+.movieYearHeading {
+	text-align: center;
+	font-family: Georgia;
+	text-shadow: 3px 3px #999999;
+}
+
+.container {
+	background-color: lightgray;
+	border-radius: 20px;
+	box-shadow: 10px 10px 10px gray;
+	width: 800px;
+	margin: auto;
+	overflow: hidden;
+}
+
+.rottenImage {
+	background-image: url('images/rottenlargebg.png');
+	width: 550px;
+}
+
+.score {
+	font-weight: bold;
+	font-size: 70px;
+	font-family: sans-serif;
+	color: red;
+	vertical-align: top;
+}
+
+.overview {
+	vertical-align: top;
+	float: right;
+	background-color: #A2B964;
+	width: 250px;
+}
+
+.column1 {
+	float: left;
+	width: 260px;
+	height: 400px;
+	margin-left: 5px;
+}
+
+.column2 {
+	float: left;
+	width: 260px;
+	height: 400px;
+	margin-left: 10px;
+}
+
+.review {
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 20px;
+	background-color: #FFFFFF;
+	border-color: #CCCCCC;
+	font-size: 10pt;
+	font-family: serif;
+	text-align: left;
+	padding: 8px;
+}
+
+.wrap {
+	float: left;
+	margin-right: 5px;
+}
+
+.movieInfo {
+	background-color: darkseagreen;
+	font-family: arial;
+	width: 250px;
+	float: right;
+}
+
+dt {
+	padding-top: 7px;
+	font-weight: bold;
+}

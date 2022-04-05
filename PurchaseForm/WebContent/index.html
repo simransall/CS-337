@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Purchase Form</title>
+<link href="index.css" type="text/css" rel="stylesheet">
+<!--Simran Sall  -->
+</head>
+<body>
+<div class = 'container'>
+<form  onsubmit = 'showOrder(); return false;'>
+<div class = 'title'><h4 style = 'text-align: center'>Soda Purchase</h4></div>
+	<div id = 'fillIn'>
+	First Name <input type = 'text' id = 'first' pattern = '[A-Z a-z]*' required><br><br>
+	Last Name  <input type = 'text' id = 'last'  pattern = '[A-Z a-z]*' required><br><br>
+	Phone 	   <input type = 'text' id = 'phone'
+				pattern = '^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$'
+				required><br><br>
+	City 	   <input type = 'text' id = 'city'  pattern = '[A-Z a-z]*' required><br><br>
+	State 
+		<select id = 'state'>
+		<option> Alabama </option>
+		<option> Arizona </option>
+		<option> Arizona </option>
+		<option> Arkansas </option>
+		</select>
+	<br><br>
+	Zip <input type = 'text' id = 'zip' pattern = '[0-9]{5}' required><br><br>
+	Quantity (1-5) <span><input type = 'number' id = 'num' min = '1' max = '5'></span><br>
+		<input type = 'radio' id = 'small' name = 'size' value = 'small'>  Small $2.00 <br>
+		<input type = 'radio' id = 'medium'name = 'size' value = 'medium'> Medium $2.65 <br>
+		<input type = 'radio' id = 'large' name = 'size' value = 'large'>  Large $2.99 <br><br><br>
+	<button>Submit</button>	
+	</div>
+</form>
+</div>
+<div class = 'receipt'>
+	<h3><b>Receipt</b></h3>
+		Purchase Date: <span id = 'date'></span> <br>
+		Purchased item(s): <span id = 'purchase'></span><br> 
+		Total Cost <span id = 'cost'></span><br><br>
+	<fieldset>
+		<legend>Ship to</legend>
+		<div id = 'receipt info'></div>
+	</fieldset>
+</div>
+
+<script>
+	var first = document.getElementById('first');
+	var last = document.getElementById('last');
+	var city = document.getElementById('city');
+	var zip  = document.getElementById('zip');
+	var state = document.getElementById('state');
+	
+	var number = document.getElementById('num');
+	var one = document.getElementById('small');
+	var two = document.getElementById('medium');
+	var three = document.getElementById('large');
+	
+	var date = document.getElementById('date');
+	var purchase = document.getElementById('purchase');
+	var cost = document.getElementById('cost');
+	var receiptInfo = document.getElementById('receipt info');
+	var receipt = document.getElementById('receipt');
+	
+	var today = new Date();
+	var day = today.getDate();
+	var year = today.getFullYear();
+	var month = today.getMonth()
+	var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+		'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+	
+	function showOrder(){
+		var whichOne = ''
+		var price = ''
+		
+		if(one.checked){whichOne = 'small'; price = '2.00'}
+		else if(two.checked){whichOne = 'medium'; price = '2.65'}
+		else if(three.checked){whichOne = 'large'; price = '2.99'}
+		
+		date.innerHTML = day + '-' + months[month] + '-' + year
+		purchase.innerHTML = number.value + ' ' + whichOne + ' item(s)'
+		cost.innerHTML = '$' + (number.value * price).toFixed(2)
+		receiptInfo.innerHTML = first.value + ' ' + last.value + '<br>'
+		+ city.value + ', ' + state.value +'<br>' + zip.value
+	}
+</script>
+</body>
+</html>

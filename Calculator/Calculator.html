@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Calculator</title>
+</head>
+<body>
+<h4>Calculator</h4>
+x : <input type='text' id='numOne'>
+<br>
+y : <input type='text' id='numTwo'>
+<br>
+<button id='button'>Show results</button>
+<br>
+<div id = 'toBeChanged'></div>
+<script>
+	button.addEventListener("click", showResults)
+	function showResults() {
+		var button = document.getElementById('button');
+		var one = Number(document.getElementById('numOne').value);
+		var two = Number(document.getElementById('numTwo').value);
+		var number = document.getElementById('toBeChanged');
+		document.write(one, ' + ', two, ' = ', number.innerHTML = one+two, '<br>')
+		document.write(one, ' - ', two, ' = ', number.innerHTML = one-two, '<br>')
+		document.write(one, ' * ', two, ' = ', number.innerHTML = one*two, '<br>')
+		document.write(one, ' / ', two, ' = ', number.innerHTML = one/two, '<br>')
+		document.write(one, ' % ', two, ' = ', number.innerHTML = one%two, '<br>')
+
+	}
+
+
+</script>
+</body>
+</html>

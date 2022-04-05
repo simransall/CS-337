@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JS Prompt</title>
+</head>
+<body>
+The JS inside the script runs on page load and page refresh. <br>
+</body>
+<script>
+	var number = prompt("Enter a floating point number with at least one decimal");
+	document.write('You entered ' + number, '<br>');
+	document.write('sqrt: ' + Math.sqrt(number), '<br>');
+	document.write('round: ' + Math.round(number), '<br>');
+	document.write('ceil: ' + Math.ceil(number), '<br>');
+	document.write('floor: ' + Math.floor(number), '<br>');
+</script>
+</html>

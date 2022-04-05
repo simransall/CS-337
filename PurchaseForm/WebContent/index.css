@@ -1,0 +1,38 @@
+@charset "ISO-8859-1";
+
+/* Simran Sall */
+
+.container{
+	background-color: lightblue;
+	border-color: lightgray;
+	border-style: outset;
+	border-width: 10px;
+	width: 400px;
+	height: 600px;
+	font-family: sans-serif;
+	padding: 20px;
+	margin: 20px;
+}
+
+
+.title{
+	font-size: 20px;
+}
+
+.fillIn{
+	margin-left: 10px;
+	text-align: left;
+
+}
+
+.receipt{
+	background-color: pink;
+	border-color: red;
+	border-style: outset;
+	border-width: 10px;
+	width: 600px;
+	height: 400 px;
+	font-family: sans-serif;
+	margin: 20px;
+	padding: 20px;
+}
